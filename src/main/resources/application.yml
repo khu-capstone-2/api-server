@@ -55,6 +55,8 @@ openai:
 
 ---
 spring:
+  application:
+    name: first
   config:
     activate:
       on-profile: dev
@@ -69,12 +71,12 @@ spring:
 eureka:
   instance:
     # 표기되는 규칙 변경
-    instance-id: first
-    hostname: dev.newsbreifing.store
-    ip-address: dev.newsbreifing.store
+    instance-id:
+    hostname: khu-fithub.profithub.store
+    ip-address: khu-fithub.profithub.store
   client:
     service-url:
-      defaultZone: http://khu-gateway.profithub.store:8761//eureka
+      defaultZone: http://khu-gateway.profithub.store:8761/eureka
   jpa:
     properties:
       hibernate:
@@ -105,6 +107,8 @@ openai:
 
 ---
 spring:
+  application:
+    name: second
   config:
     activate:
       on-profile: release
