@@ -120,6 +120,15 @@ spring:
   sql:
     init:
       mode: never
+eureka:
+  instance:
+    # 표기되는 규칙 변경
+    instance-id:
+    hostname: khu-fithub2.profithub.store
+    ip-address: khu-fithub2.profithub.store
+  client:
+    service-url:
+      defaultZone: http://khu-gateway.profithub.store:8761/eureka
   jpa:
     properties:
       hibernate:
